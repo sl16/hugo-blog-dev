@@ -1,3 +1,7 @@
 [submodule "blog/themes/gokarna"]
 	path = blog/themes/gokarna
 	url = https://github.com/gokarna-theme/gokarna-hugo.git
+[submodule "blog/public"]
+	path = blog/public
+	url = https://github.com/sl16/bartosvojtech.github.io.git
+	branch = main
