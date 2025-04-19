@@ -1,15 +1,15 @@
-baseURL = "https://example.org/"
+baseURL = "https://bartosvojtech.github.io/"
 defaultContentLanguage = "en"
 # Automatically generate robots.txt
 enableRobotsTXT = true
 languageCode = "en"
 theme = "gokarna"
-title = "bartosvoj.tech"
+title = "🧙 bartosvoj.tech"
 
 [menu]
   [[menu.main]]
     # Display name
-    name = "Posts"
+    name = "Blog"
 
     # Relative URL slug (appended to baseURL)
     url = "/posts/"
@@ -18,21 +18,99 @@ title = "bartosvoj.tech"
     # listed last in the menu (rightmost)
     weight = 1
 
+ # [[menu.main]]
+   # name = "Tags"
+   # url = "/tags/"
+   # weight = 2
+
   [[menu.main]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 2
+    name = "Projects"
+    url = "/projects/"
+    weight = 3
     
+  [[menu.main]]
+    name = "Curriculum vitae"
+    url = "/cv/"
+    weight = 4
+
   [[menu.main]]
     # Unique identifiers are required for menu entries without a name property,
     # or for menu entries which re-use a name
     identifier = "github"
 
     # Absolute URL to external resource
-    url = "https://github.com"
-    weight = 3
+    url = "https://github.com/sl16"
+    weight = 5
     
     # Surround the menu entry (or name) with HTML content, such as Feather
     # icons: https://feathericons.com
     pre = "<span data-feather='github'></span>"
     post = ""
+	[menu.main.params]
+      newPage = true
+
+  [[menu.main]]
+    identifier = "linkedin"
+    url = "https://www.linkedin.com/in/vojtabar/"
+    weight = 6
+    pre = "<span data-feather='linkedin'></span>"
+    post = ""
+	[menu.main.params]
+      newPage = true
+
+
+[params]
+  # Choose the color shown when hyperlinks are hovered over
+  accentColor = "#00babc"
+
+  # Resource URL for the site avatar (home page and header)
+  # avatarURL = "/images/avatar.webp"
+
+  # Describe the avatar for screen readers
+  # avatarAltText = "avatar"
+
+  # Set the avatar's size: size-xs, size-s, size-m, size-l & size-xl
+  # avatarSize = "size-m"
+
+  # Inject arbitrary HTML via the <head> tag
+  # Best used for importing custom JavaScript, CSS, or analytics
+  # customHeadHTML = ""
+
+  # Configure how post dates are displayed
+  dateFormat = "January 2, 2006"
+  
+  # Home page meta description
+  description = "ex-marketer, aspiring cybersec professional"
+
+  # Footer text (i.e. author/project name)
+  # footer = "The Marauders"
+
+  # Define SEO keywords
+  metaKeywords = ["blog", "bartos", "bartosvoj", "vojtech bartos"]
+
+  # Define how many posts are displayed on the home page
+  # showPostsOnHomePage must be "popular" or "recent"
+  numberPostsOnHomePage = 4
+
+  # Display a "back to top" button on posts and pages: true, false
+  # May not render on smaller screen sizes
+  showBackToTopButton = true
+
+  # Display posts on the home page:
+  # "popular" (order posts by weight)
+  # "recent" (order posts by date)
+  # "", unset (do not display)
+  showPostsOnHomePage = "recent"
+
+  # Show the previous and next post in your timeline: "true", "false"
+  # Incompatible with Weight
+  togglePreviousAndNextButtons = false
+
+  [markup]
+    [markup.goldmark]
+      [markup.goldmark.renderer]
+        unsafe = true
+	[markup.tableOfContents]
+      startLevel = 1
+      endLevel = 3
+      ordered = false
